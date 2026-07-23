@@ -23,6 +23,7 @@ body {
   background: var(--canvas);
   color: var(--gold);
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 img { display: block; max-width: 100%; }
@@ -49,7 +50,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* Vector…-13: atmospheric clouds, intentionally independent from the color base. */
-.background--clouds { opacity: .7; mix-blend-mode: normal; }
+.background--clouds { opacity: .7; mix-blend-mode: normal; transform: scale(1.09); transform-origin: center center; }
 .background--texture { opacity: .42; mix-blend-mode: multiply; }
 
 .constellation { position: absolute; z-index: var(--z-decoration); width: 19%; opacity: .85; }
@@ -151,6 +152,7 @@ img { display: block; max-width: 100%; }
   z-index: var(--z-details);
   display: grid;
   place-items: center;
+  aspect-ratio: 2007 / 85;
 }
 
 .contact-link { position: absolute; inset: 0; display: grid; place-items: center; cursor: pointer; }
