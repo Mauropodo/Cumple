@@ -39,6 +39,15 @@ if (window.gsap) {
           gsap.to(".tarot", { x: -5, y: 6, rotation: 0.8, transformOrigin: "center", duration: 5.4, yoyo: true, repeat: -1, ease: "sine.inOut" });
           gsap.to(".cloud--top-left, .cloud--bottom-right", { y: -5, duration: 5.1, yoyo: true, repeat: -1, ease: "sine.inOut", stagger: 0.3 });
           gsap.to(".cloud--top-right, .cloud--bottom-left, .cloud--bottom-middle", { y: 4, duration: 5.7, yoyo: true, repeat: -1, ease: "sine.inOut", stagger: 0.25 });
+
+          const chevrons = gsap.utils.toArray(".mobile-chevron");
+          if (chevrons.length) {
+            gsap.set(chevrons, { autoAlpha: 0, y: -3 });
+            gsap.timeline({ repeat: -1, repeatDelay: 0.25 })
+              .to(chevrons, { autoAlpha: 1, y: 2, duration: 0.35, stagger: 0.18, ease: "power1.out" })
+              .to(chevrons, { autoAlpha: 0, y: 5, duration: 0.3, stagger: 0.18, ease: "power1.in" }, "+=0.25")
+              .set(chevrons, { y: -3 });
+          }
         }
 
         if (desktop) {
