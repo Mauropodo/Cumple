@@ -109,7 +109,7 @@ img { display: block; max-width: 100%; }
 .title-number { width: 26%; margin-right: .8%; }
 .title-years { width: 67%; }
 .title-life { width: 92%; }
-.hero-message { width: 96%; margin-top: 4%; }
+.hero-message { display: block; width: 96%; margin-top: 4%; }
 .mobile-chevron-hint { display: none; }
 
 .event-details {
